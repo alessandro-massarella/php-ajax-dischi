@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ex-dischi-musicali</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="vue.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+      <div id="myApp">
+        <header>
+            <div class="container">
+                <img src="logo.png" alt="logo" />
+            </div>
+        </header>
+
+        <div class="cds-container container">
+            <!-- Disco ad esempio -->
+            <div class="cd" v-for="record in records">
+                <img :src="record.poster" alt="record cover">
+                <h3>{{ record.title }}</h3>
+                <span class="author">{{ record.author }}</span>
+                <span class="year">{{ record.year}}</span>
+            </div>
+        </div>
+        <script src="main.js" charset="utf-8"></script>
+      </div>
+    </body>
+</html>
