@@ -29,9 +29,9 @@ header img {
     margin-top: 10px;
 }
 
-header .container .search {
+header .search_box {
     position: absolute;
-    right: 30px;
+    right: 100px;
     top:50%;
     transform: translate(0, -50%);
 }
