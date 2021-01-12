@@ -1,5 +1,8 @@
 <?php
 
+$find = $_GET['search_text'];
+
+
 $records = [
     
     "success" => true,
@@ -93,7 +96,6 @@ $filtered_records = [
     "success" => true,
     "response" => []
 ];
-$find = $_GET['find'];
 
 // echo $_GET['find'];
 // uso un ciclo per scorrere l'array fino alla sezione 'author' per controllare se è contenuta una determinata stringa:

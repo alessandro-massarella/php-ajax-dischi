@@ -4,7 +4,9 @@ const myApp = new Vue ({
   data: {
     records: [],
     // url: "https://flynn.boolean.careers/exercises/api/array/music",
-    url: "http://localhost/server.php",
+    searchText: "",
+    url: "http://localhost/server.php" 
+
   },
 
   mounted () {
@@ -17,6 +19,28 @@ const myApp = new Vue ({
               console.log(response)
             })
   },
+  
+  methods: {
+
+    filtra: function() {
+      axios
+      .get (this.url, {
+        params: {
+          'search_text': this.searchText /* invio al server anche la query string per ricercare la parola */
+          
+        }
+
+      })
+      .then ((response)=> {
+
+        this.records = response.data.response
+        console.log(response)
+      })
+
+
+    }
+
+  }
 
 
 });
